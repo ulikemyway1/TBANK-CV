@@ -42,7 +42,6 @@ a {
         'F F M M';
     grid-auto-rows: min-content;
     gap: 20px;
-
 }
 
 .text-densed {
@@ -124,6 +123,10 @@ a {
 
     &:last-of-type .progress-line {
         width: 77%;
+    }
+
+    span {
+        min-width: 30%;
     }
 }
 
@@ -325,4 +328,62 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     body {
         font-size: 10px;
     }
+}
+
+@media (max-width: 565px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+            'A A B B'
+            'C C C C'
+            'D D D D'
+            'D D D D'
+            'D D D D'
+            'E E E E'
+            'F F F F'
+            'J J J J'
+            'M M M M';
+        grid-auto-rows: min-content;
+        gap: 10px;
+    }
+
+    .tools-cards__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .tools-card {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tools-card__wrapper {
+        gap: 25px;
+        grid-template-columns: repeat(2, 50px);
+        grid-auto-rows: 30px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .tools-card__title {
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+
+    .general-info,
+    .my-name,
+    .occupation {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+
 }
