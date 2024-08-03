@@ -2,7 +2,7 @@
     --main-green: #28D979;
     --main-gray: #F0F0F0;
     --main-yellow: #DDF163;
-
+    --key-word: #149063;
 }
 
 * {
@@ -20,6 +20,9 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
 
 .container {
     margin: 0 auto;
@@ -30,7 +33,7 @@ ul {
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
     grid-template-areas: 'A B C C'
         'D D D E'
         'D D D E'
@@ -100,7 +103,6 @@ ul {
     flex-direction: column;
     gap: 16px;
     grid-area: C;
-
 }
 
 .progress-line {
@@ -125,14 +127,11 @@ ul {
     &:last-of-type .progress-line {
         width: 77%;
     }
-
-
 }
 
 .experience {
     grid-area: D;
     min-width: 120px;
-
 }
 
 .experience__position {
@@ -159,6 +158,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
 .long-card {
     background-color: #ffffff;
+    gap: 8px;
 }
 
 .long-card:has(> .card-inner-wrapper .badge) {
@@ -218,6 +218,92 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     max-width: 76px;
 }
 
+.education {
+    grid-area: F;
+}
+
+.education-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+}
+
+.majority {
+    font-size: 8px;
+    font-weight: 400;
+}
+
+.majority__title {
+    font-size: 10px;
+    font-weight: 500;
+
+}
+
+.majority__key-words {
+    color: var(--key-word);
+}
+
+.card-title {
+    font-weight: 500;
+}
+
+.education-card {
+    background-color: #ffffff;
+    gap: 8px;
+}
+
+.education-card__place {
+    font-size: 8px;
+}
+
+.education-card.picked {
+    position: relative;
+    background-color: var(--main-green);
+    color: #ffffff;
+
+    & .majority__key-words {
+        color: #ffffff;
+    }
+
+    &::before {
+        position: absolute;
+        top: 11px;
+        right: 8px;
+        content: url('assets/img/icons/heart.svg')
+    }
+}
+
+.interests {
+    grid-area: J;
+}
+
+.interests-wrapper {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.interests-card {
+    background-color: #ffffff;
+}
+
+.contacts {
+    grid-area: M;
+    background-color: #000000;
+    color: #ffffff;
+
+    a {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 10px;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 600px) {
     body {
