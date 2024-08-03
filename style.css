@@ -14,6 +14,11 @@
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+    min-width: 320px;
+}
+
+h1 {
+    visibility: hidden;
 }
 
 ul {
@@ -195,6 +200,8 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     padding: 8px;
     position: relative;
     background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
 }
 
 .tools-cards__wrapper {
@@ -356,8 +363,6 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
     .tools-card {
         padding: 20px;
-        align-items: center;
-        justify-content: center;
     }
 
     .tools-card__wrapper {
@@ -384,6 +389,121 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     .card-title {
         font-size: 16px;
     }
+}
 
+@media (min-width: 600px) and (max-width: 900px) {
+
+    .languages__list-item {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+@media (min-width: 600px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .greeting,
+    .my-name,
+    .occupation {
+        font-size: 26px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .long-card {
+        gap: 16px;
+        font-size: 16px;
+    }
+
+    .experience {
+        min-width: 215px;
+    }
+
+    .experience-cards-wrapper {
+        gap: 32px
+    }
+
+    .experience__company {
+        font-size: 14px;
+    }
+
+    .experience__position {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .responsibilities-list__item {
+        font-size: 14px;
+    }
+
+    .tools {
+        gap: 30px
+    }
+
+    .tools-card {
+        padding: 16px;
+    }
+
+    .tools-cards__wrapper {
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .tools-card__title {
+        font-size: 16px;
+    }
+
+    .tools-card__wrapper {
+        grid-template-columns: repeat(2, 40px);
+        grid-auto-rows: 40px;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .majority,
+    .majority__title,
+    .majority__key-words,
+    .education-card__place {
+        font-size: 14px;
+    }
+
+    .majority__key-words {
+        margin-top: 10px;
+        line-height: 18px;
+    }
+
+    .majority__title {
+        font-size: 16px;
+    }
+
+    .education-card {
+        gap: 16px
+    }
+
+    .education-card.picked::before {
+        transform: scale(2);
+        right: 18px;
+    }
+
+    .contacts {
+
+        h2 {
+            font-size: 18px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
 
 }
