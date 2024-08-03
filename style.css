@@ -56,7 +56,6 @@ a {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 8px;
     border-radius: 12px;
     padding: 10px 12px;
@@ -99,9 +98,7 @@ a {
 }
 
 .languages {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: block;
     grid-area: C;
 }
 
@@ -115,7 +112,8 @@ a {
 .languages__list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
+    margin-top: 18px;
 }
 
 .languages__list-item {
@@ -132,23 +130,31 @@ a {
 .experience {
     grid-area: D;
     min-width: 120px;
+    justify-content: flex-start;
+    gap: 18px;
 }
 
 .experience__position {
     font-size: 10px;
     font-weight: 500;
+    line-height: 15px;
 }
 
 .experience__company {
     font-size: 8px;
+    line-height: 12px;
 }
 
+.experience-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .card-inner-wrapper {
     display: flex;
-    gap: 8px;
-    justify-content: space-between;
-    align-items: center;
+    gap: 25px;
+    align-items: flex-start;
 }
 
 ul.responsibilities-list:has(> li.responsibilities-list__item) {
@@ -159,6 +165,8 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 .long-card {
     background-color: #ffffff;
     gap: 8px;
+    font-size: 8px;
+    padding: 7px 9px;
 }
 
 .long-card:has(> .card-inner-wrapper .badge) {
@@ -214,12 +222,14 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     justify-items: center;
     justify-content: center;
     padding: 8px;
-    gap: 16px;
-    max-width: 76px;
+    gap: 12px;
+    max-width: 80px;
 }
 
 .education {
     grid-area: F;
+    justify-content: flex-start;
+    gap: 12px;
 }
 
 .education-cards-wrapper {
@@ -242,6 +252,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
 .majority__key-words {
     color: var(--key-word);
+    line-height: 12px;
 }
 
 .card-title {
@@ -251,6 +262,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 .education-card {
     background-color: #ffffff;
     gap: 8px;
+    padding: 6px 10px;
 }
 
 .education-card__place {
@@ -276,6 +288,8 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
 .interests {
     grid-area: J;
+    justify-content: flex-start;
+    gap: 13px;
 }
 
 .interests-wrapper {
@@ -285,6 +299,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 }
 
 .interests-card {
+    padding: 4px 10px;
     background-color: #ffffff;
 }
 
@@ -302,6 +317,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     h2 {
         font-weight: 500;
         font-size: 14px;
+        line-height: 21px;
     }
 }
 
