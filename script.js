@@ -38,4 +38,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .save();
         });
+
+    const waveElements = document.querySelectorAll(
+        'div:has([contenteditable]), .button, .img-wrapper'
+    );
+
+    waveElements.forEach((element) => {
+        element.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const wave = document.createElement('div');
+            wave.className = 'wave-effect';
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            wave.style.width = wave.style.height = `${size}px`;
+            wave.style.left = `${e.clientX - rect.left - size / 2}px`;
+            wave.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+            element.appendChild(wave);
+
+            wave.addEventListener('animationend', function () {
+                wave.remove();
+            });
+        });
+    });
 });
