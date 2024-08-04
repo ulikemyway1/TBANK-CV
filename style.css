@@ -72,6 +72,7 @@ a {
     position: relative;
     overflow: hidden;
 }
+
 .photo-of-me {
     width: 100%;
     padding: 0;
@@ -207,14 +208,14 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     background-color: #ffffff;
     align-items: center;
     justify-content: center;
-    overflow:visible !important;
+    overflow: visible !important;
 }
 
 .tools-cards__wrapper {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    overflow:visible !important;
+    overflow: visible !important;
 }
 
 .tools-card__title {
@@ -534,18 +535,20 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 }
 
 div:has([contenteditable]) {
-    transition: all 0.2s;
+    transition: all 0.4s;
     position: relative;
     overflow: hidden;
 }
 
-div:has([contenteditable]:focus) {
-    border: 3px solid var(--key-word);
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px rgb(122, 122, 122);
+*:has([contenteditable]:focus) {
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px rgba(37, 139, 36, .4);
 }
 
 
+[contenteditable]:focus {
+    outline: none;
+}
 
 .wave-effect {
     position: absolute;
