@@ -29,9 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
             html2pdf()
                 .from(pdfContent)
                 .set({
-                    margin: 0,
+                    margin: [10, 25, 10, 10],
+                    pagebreak: {
+                        mode: ['avoid-all'],
+                    },
+                    image: { type: 'jpeg', quality: 0.98 },
                     filename: `${pdfName || 'user'} CV`,
                     jsPDF: {
+                        unit: 'mm',
                         orientation: 'portrait',
                     },
                     pagebreak: { before: '.education', avoid: 'img' },
