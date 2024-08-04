@@ -1,7 +1,7 @@
 :root {
-    --main-green: #28D979;
-    --main-gray: #F0F0F0;
-    --main-yellow: #DDF163;
+    --main-green: #28d979;
+    --main-gray: #f0f0f0;
+    --main-yellow: #ddf163;
     --key-word: #149063;
 }
 
@@ -13,7 +13,7 @@
 
 body {
     padding-bottom: 40px;
-    font-family: "Poppins", sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 16px;
     min-width: 320px;
 }
@@ -40,7 +40,8 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, auto);
-    grid-template-areas: 'A B C C'
+    grid-template-areas:
+        'A B C C'
         'D D D E'
         'D D D E'
         'D D D E'
@@ -55,7 +56,7 @@ a {
 }
 
 .gray {
-    background-color: var(--main-gray)
+    background-color: var(--main-gray);
 }
 
 .card {
@@ -94,7 +95,7 @@ a {
 
 .occupation {
     font-size: 12px;
-    color: #5C5C5C;
+    color: #5c5c5c;
 }
 
 .general-info {
@@ -177,14 +178,14 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 }
 
 .long-card {
-    background-color: #ffffff;
+    background-color: #fff;
     gap: 8px;
     font-size: 8px;
     padding: 7px 9px;
 }
 
 .long-card:has(> .card-inner-wrapper .badge) {
-    color: #ffffff;
+    color: #fff;
     background-color: var(--main-green);
 }
 
@@ -192,7 +193,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     margin-left: auto;
     padding: 2px 6px;
     color: var(--main-yellow);
-    background-color: #7E731266;
+    background-color: #7e731266;
     max-width: max-content;
 }
 
@@ -205,7 +206,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 .tools-card {
     padding: 8px;
     position: relative;
-    background-color: #ffffff;
+    background-color: #fff;
     align-items: center;
     justify-content: center;
     overflow: visible !important;
@@ -224,8 +225,8 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     top: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     font-weight: 500;
     font-size: 5px;
@@ -236,8 +237,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     display: grid;
     grid-template-columns: repeat(2, 20px);
     grid-auto-rows: 20px;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
     justify-content: center;
     padding: 8px;
     gap: 12px;
@@ -254,7 +254,6 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-
 }
 
 .majority {
@@ -265,7 +264,6 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 .majority__title {
     font-size: 10px;
     font-weight: 500;
-
 }
 
 .majority__key-words {
@@ -273,12 +271,8 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     line-height: 12px;
 }
 
-.card-title {
-    font-weight: 500;
-}
-
 .education-card {
-    background-color: #ffffff;
+    background-color: #fff;
     gap: 8px;
     padding: 6px 10px;
 }
@@ -290,17 +284,17 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 .education-card.picked {
     position: relative;
     background-color: var(--main-green);
-    color: #ffffff;
+    color: #fff;
 
     & .majority__key-words {
-        color: #ffffff;
+        color: #fff;
     }
 
     &::before {
         position: absolute;
         top: 11px;
         right: 8px;
-        content: url('assets/img/icons/heart.svg')
+        content: url('assets/img/icons/heart.svg');
     }
 }
 
@@ -318,16 +312,16 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
 .interests-card {
     padding: 4px 10px;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .contacts {
     grid-area: M;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
 
     a {
-        color: #ffffff;
+        color: #fff;
         font-weight: 400;
         font-size: 10px;
     }
@@ -339,13 +333,13 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
     body {
         font-size: 10px;
     }
 }
 
-@media (max-width: 565px) {
+@media (width <= 565px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(9, auto);
@@ -399,23 +393,19 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
-
+@media (width >= 600px) and (width <= 900px) {
     .languages__list-item {
         grid-template-columns: 2fr 3fr;
     }
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
     .card-title {
         font-size: 18px;
     }
-
 }
 
-
-@media (min-width: 1024px) {
-
+@media (width >= 1024px) {
     .greeting,
     .my-name,
     .occupation {
@@ -436,7 +426,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 
     .experience-cards-wrapper {
-        gap: 32px
+        gap: 32px;
     }
 
     .experience__company {
@@ -453,7 +443,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 
     .tools {
-        gap: 30px
+        gap: 30px;
     }
 
     .tools-card {
@@ -495,7 +485,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 
     .education-card {
-        gap: 16px
+        gap: 16px;
     }
 
     .education-card.picked::before {
@@ -504,7 +494,6 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
     }
 
     .contacts {
-
         h2 {
             font-size: 18px;
         }
@@ -513,21 +502,19 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
             font-size: 16px;
         }
     }
-
 }
 
 .button {
     margin: 0 auto;
     margin-top: 10px;
     background-color: var(--main-green);
-    color: #ffffff;
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: all 0.6s;
     position: relative;
     overflow: hidden;
 }
-
 
 @media (hover: hover) and (pointer: fine) {
     .button:hover {
@@ -543,9 +530,8 @@ div:has([contenteditable]) {
 
 *:has([contenteditable]:focus) {
     border-radius: 4px;
-    box-shadow: 0 0 0 4px rgba(37, 139, 36, .4);
+    box-shadow: 0 0 0 4px rgb(37 139 36 / 40%);
 }
-
 
 [contenteditable]:focus {
     outline: none;
@@ -556,7 +542,7 @@ div:has([contenteditable]) {
     border-radius: 50%;
     transform: scale(0);
     animation: wave-animation 0.6s linear;
-    background: rgba(161, 236, 171, 0.6);
+    background: rgb(161 236 171 / 60%);
 }
 
 @keyframes wave-animation {
