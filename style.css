@@ -524,3 +524,14 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
         filter: brightness(1.1);
     }
 }
+
+div:has([contenteditable]) {
+    transition: all 0.2s;
+    position: relative;
+}
+
+div:has([contenteditable]:focus) {
+    border: 3px solid var(--key-word);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgb(122, 122, 122);
+}
