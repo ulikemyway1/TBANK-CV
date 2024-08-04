@@ -518,6 +518,7 @@ ul.responsibilities-list:has(> li.responsibilities-list__item) {
 
 .button {
     margin: 0 auto;
+    margin-top: 10px;
     background-color: var(--main-green);
     color: #ffffff;
     border: none;
