@@ -20,4 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         });
     });
+
+    document
+        .getElementById('download-pdf')
+        .addEventListener('click', function () {
+            const pdfContent = document.querySelector('main');
+            const pdfName = document.querySelector('.my-name')?.textContent;
+            html2pdf()
+                .from(pdfContent)
+                .set({
+                    margin: 0,
+                    filename: `${pdfName || 'user'} CV`,
+                    jsPDF: {
+                        orientation: 'portrait',
+                    },
+                    pagebreak: { before: '.education', avoid: 'img' },
+                })
+                .save();
+        });
 });
